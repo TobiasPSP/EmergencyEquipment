@@ -24,4 +24,12 @@ The challenging part is soldering the OPT101 chip onto the board correctly: plac
 
 ### Connecting OPT101 to Arduino Nano (or similar)
 
+Connecting the OPT101 to Arduino Nano (or any other microprocessor board) is simple:
+
+* Connect *VCC* to Anode (i.e. 5V+)
+* Connect *COM* and *-V* to GND
+* Connect *OUT* and *1M* and use them as output. Depending on the brightness of light, the connected wires will produce 0-5V
+
 ![plot](./simple_wiring_opt101_to_arduino_nano.png)
+
+You can connect the output (*OUT* and *1M*) to one of the analog input pins of your MC, or you can as well connect it to a multimeter (connect the other end of it to GND) to see how the OPT101 works.
