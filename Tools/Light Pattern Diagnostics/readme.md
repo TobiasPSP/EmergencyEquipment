@@ -21,3 +21,7 @@ You could of course reuse an old solar-cell operated calculator as well by reusi
 In my tool I am going to use the [CJMCU board with OPT101 from Texas Instruments](https://www.google.com/search?q=CJMCU+101). More often than not, the board comes in parts and w/o instructions or data sheet, and you are expected to solder everything together. 
 
 The challenging part is soldering the OPT101 chip onto the board correctly: place it on the side of the PCB that shows a square white dot (so that the soldering bridges on the PCB board are still visible and not covered by the OPT101 chip), and make sure you place the chip in such way that the (barely visible) "half-moon"-shaped recess is facing away from the PCB board pins.
+
+### Connecting OPT101 to Arduino Nano (or similar)
+
+![plot](./simple_wiring_opt101_to_arduino_nano.png)
