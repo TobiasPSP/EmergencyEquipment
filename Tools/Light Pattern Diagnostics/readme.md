@@ -8,7 +8,7 @@ Knowing these patterns can be helpful for many scenarios:
 * or you'd like to create your own emergency lights from old hardware or modern vanilla LED components and would like them to match their professional counter parts
 * yet again others just love the challenge
 
-We are going to create a light pattern detector that can dump the timings of any LED-driven emergency light. Here is a sample output for a *Hänsch Movia D* magnetic LED emergency light:
+We are going to create a light pattern detector that can dump the timings of any LED-driven emergency light. Here is a sample output for a *Hänsch Movia D* magnetic LED emergency light (8-part-pattern):
 
 ```
 <8>: [153][-45][16][-25][16][-25][15][-187]
@@ -18,7 +18,18 @@ We are going to create a light pattern detector that can dump the timings of any
 <8>: [154][-45][16][-25][15][-25][16][-188]
 ```
 
-So this light uses a pattern of 8 parts. All numbers are in milliseconds. Negative numbers are OFF-phases (dark), and positive values are ON-phases (light).
+And this is the light pattern for a *Pintsch Bamag 4x3 LED Unit*** for a *Topas* emergency light bar (4-part-pattern):
+
+```
+<4>: [129][-25][36][-305]
+<4>: [129][-24][37][-305]
+<4>: [128][-26][36][-305]
+<4>: [128][-25][37][-304]
+<4>: [129][-25][37][-304]
+<4>: [129][-25][36][-306]
+```
+
+All numbers are in milliseconds. Negative numbers are OFF-phases (dark), and positive values are ON-phases (light).
 
 A *Hänsch Movia D* LED flashlight therefore uses this pattern:
 
@@ -28,6 +39,13 @@ ON:   16ms
 OFF:  25ms
 ON:   16ms
 OFF: 187ms
+
+A *Pintsch 4x3 LED Unit* in contrast uses this pattern:
+
+ON:  130ms
+OFF:  25ms
+ON:   35ms
+OFF: 305ms
 
 ## Concept for Light Pattern Detector
 
