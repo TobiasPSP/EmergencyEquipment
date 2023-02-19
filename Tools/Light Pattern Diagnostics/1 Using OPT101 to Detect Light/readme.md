@@ -141,7 +141,9 @@ So let's adjust the code accordingly.
 
 ## Better Code for Testing
 
-By lowering the valid range from 0-1023 to 0-863, readings will be more suitable for testing. In addition, I am no longer outputting the raw readings and voltages, and decided to output light intensity in percent with a float instead of an integer:
+By lowering the valid range from 0-1023 to 0-863, readings will be more suitable for testing. In addition, I am no longer outputting the raw readings and voltages, and decided to output light intensity in percent with a float instead of an integer.
+
+Here is the improved [testing code](./1.1_Basic_Improved/1.1_Basic_Improved.ino) that now emits the detected light intensity in real-time as a percentage:
 
 ```c++
 // make sure you adjust the pin to the analog input pin you use
