@@ -1,6 +1,6 @@
 # Identifying Light Patterns
 
-In our second part - after [getting the OPT101 to work](./1%20Using%20OPT101%20to%20Detect%20Light) with Arduino and analyzing raw brightness readings - we'll now consolidate the flood of raw brightness readings emitted by the OPT101.
+In our second part - after [getting the OPT101 to work](../1%20Using%20OPT101%20to%20Detect%20Light) with Arduino and analyzing raw brightness readings - we'll now consolidate the flood of raw brightness readings emitted by the OPT101.
 
 ## Turning Raw Values to Timings
 
