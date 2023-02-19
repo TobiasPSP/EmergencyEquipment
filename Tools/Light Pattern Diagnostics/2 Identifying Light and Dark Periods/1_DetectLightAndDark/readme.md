@@ -17,7 +17,7 @@ So here is the plan:
 
 ## The Code
 
-Based on the code created in part 1, here is the new code that incorporates the requirements from above:
+Based on the code created in part 1, here is the [new code](./1_DetectLightAndDark/1_DetectLightAndDark.ino) that incorporates the requirements from above:
 
 
 
