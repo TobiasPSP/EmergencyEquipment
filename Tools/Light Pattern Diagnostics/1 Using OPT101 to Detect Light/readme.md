@@ -360,5 +360,5 @@ When we identify ON and OFF phases in our next step, this will also be the place
 * What is the maximum possible distance between the OPT101 detector and the emergency light to get reliable readings?
 * What is the maximum angle for emitted light that still safely produces reliable results?
 
-Here is the [second part](../2%20Identifying%20Light%20and%20Dark%20Periods)
+Here is the [second part](../2%20Identifying%20Light%20and%20Dark%20Periods).
 
