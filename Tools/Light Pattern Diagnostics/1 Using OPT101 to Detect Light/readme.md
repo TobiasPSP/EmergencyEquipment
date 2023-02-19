@@ -2,6 +2,8 @@
 
 As a first step, let's get the OPT101 board working and read in some light measurements so we can evaluate whether or not it is suitable for detecting emergency light patterns and better understand how the OPT101 and light detection actually works.
 
+If you like you can immediately [dive into the technical implementation](./1%20Using%20OPT101%20to%20Detect%20Light).
+
 ## Connecting Arduino and OPT101
 
 I connected the board to a *Arduino Nano*: pins **VCC** to +5V, pins **COM** and **-V** to GND. The pin **GND** remains unconnected.
