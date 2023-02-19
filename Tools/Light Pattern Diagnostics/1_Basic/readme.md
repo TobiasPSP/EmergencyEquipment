@@ -12,6 +12,15 @@ So I connected both of the analog output pins to Arduino **pin 2**. Any analog i
 
 *Note: In this simple example, I am using the board *as-is*: I did not add soldering bridges underneath the OPT101 chip (which can be used to change its sensitivity). For this reason, the analog output is read from both the pins **OUT** and **1M**.*
 
+## Code for Testing
+
+The code below shows the most simplistic setup possible, designed to monitor the OPT101 analog output.
+
+### Mapping Values to 0-100%
+Note the use of the function *map()*: Arduinos analog input pins convert any analog signal between 0 and 5V to a digital value in the range of 0 - 1023. 
+
+*map()* maps these values to a custom range. In our scenario, I would like to receive light intensity, so I am not interested in a value of 0 - 1023 but instead would prefer a percentage value between 0 (complete darkness) and 100 (full brightness).
+
 ```c++
 // make sure you adjust the pin to the analog input pin you use
 // this pin reads the analog output signal from OPT101
