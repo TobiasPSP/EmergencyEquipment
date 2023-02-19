@@ -289,3 +289,51 @@ When the emergency light emits a pulse, OPT101 records full brightness (99-100%)
 
 To better understand the influence of ambient light, I repeated the test in a completely dark room, simulating a night scenario:
 
+```
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+(...)
+99.00%.
+99.00%.
+99.00%.
+100.00%.
+23.00%.
+10.00%.
+6.00%.
+4.00%.
+3.00%.
+2.00%.
+2.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+1.00%.
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+0.00%.
+```
+
+It turns out that the reading of around 15% in the previous test for OFF-phases seems to be attributable to ambient light. 
+
+However, when looking at extensive test data in this night scenario, it turned out that the OPT101 did not immediately return to 0% when it was previously exposed to extremely bright light.
+
