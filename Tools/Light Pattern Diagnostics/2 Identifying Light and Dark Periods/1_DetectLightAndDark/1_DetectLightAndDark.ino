@@ -6,7 +6,7 @@ int threshold = 90;       // anything *above* this value will be considered BRIG
 // 100% brightness. Note that a value of 100 would never be reached
 // because 100 is the max possible value, and it can never be
 // greater than 100.
-unsigned long  minInterval = 3;  // minimum length of a pattern interval in millisec
+long  minInterval = 3;  // minimum length of a pattern interval in millisec
 // this is a safety measure for inconsistencies. Only when a pattern change
 // occurs that is at minimum of minInterval length will this be considered
 // a true pattern change
