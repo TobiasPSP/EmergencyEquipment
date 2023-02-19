@@ -21,6 +21,8 @@ Once the readings are collected, a pattern is identified:
 
 This way, the shortest possible pattern size is identified, provided there is a pattern present. 
 
+## Solution in Code
+
 Since individual readings have a slight variance of +-2ms, when comparing repetitive values, the code uses an allowance of +-2ms to identify matching values.
 
 ```c++
@@ -211,6 +213,8 @@ void loop() {
 }
 ```
 
+## Results
+
 Once you uploaded the code, open the serial monitor, then point an emergency light (or any light emitter with a pattern) to OPT101.
 
 It may take a few seconds to record 80 values. Once all 80 values are recorded, the data is analyzed and the result returned. If a pattern was detected, the output may look similar to this:
@@ -237,5 +241,13 @@ It may take a few seconds to record 80 values. Once all 80 values are recorded, 
 The first number is the number of identified parts, in this case 8 parts.
 
 After that, you see the individual timings for the light pattern. Negative values are OFF phases, and all numbers are in milliseconds. The numbers in the sample above were generated from a *Hänsch Movia D* emergency light.
+
+### Variations
+
+As you can see, there are slight variations per part in the range of +-2ms. 
+
+The initial assumption was a lack of resolution: I had been using an Arduino Nano and suspected that it might be too slow to produce fast enough readings to catch a light change right when it occurs.
+
+When I switched to a much faster Arduino Mega though the variations remained the same. I currently have no explanation and might look at the OPT101  raw voltage output with an oscilloscope to figure out whether the variations occur during post-processing on the Arduino end, or whether they might be "normal" variations produced by the emergency light itself.
 
 
