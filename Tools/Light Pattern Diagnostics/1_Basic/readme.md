@@ -335,5 +335,28 @@ To better understand the influence of ambient light, I repeated the test in a co
 
 It turns out that the reading of around 15% in the previous test for OFF-phases seems to be attributable to ambient light. 
 
-However, when looking at extensive test data in this night scenario, it turned out that the OPT101 did not immediately return to 0% when it was previously exposed to extremely bright light.
+However, when looking at extensive test data in this night scenario, it turned out that the OPT101 is indeed picking up light in a focused fashion: light that shines directly onto the OPT101 chip produces reliable high readings whereas shining light even at slight angles will decrease the readings considerably to a degree where they blend in with ambient light.
+
+## Conclusion
+
+For the purpose of detecting emergency light patterns, the OPT101 and its default sensitivity are well suited:
+
+* Ambient light and no light can be clearly distinguished from emergency light patterns. A reading of *95%* clearly determines a OFF phase, and ambient light produces readings no higher than 60%.
+* Response frequency is fast enough (low latency) to take samles in millisecond intervals
+* There seems to be no "blinding": even when the OPT101 was exposed to extremely bright light, it will detect darkness reliably in the next cycle, just a millisecond later
+
+Above is true *only* when the light shines directly onto the OPT101. If the emergency light is reaching the OPT101 even at a slight angle, readings can fall into the overlap area and produce brightness readings of 40-70%.
+
+So when analyzing emergency lights, care must be taken to point the OPT101 directly towards the emergency light. 
+
+### Next steps
+
+Now that we know that OPT101 is a great sensor for the task, in the next step we need to reduce the data and interpret ON and OFF phases reliably. The results will build the basis for pattern detection.
+
+When we identify ON and OFF phases in our next step, this will also be the place to conduct a few more tests:
+
+* What is the maximum possible distance between the OPT101 detector and the emergency light to get reliable readings?
+* What is the maximum angle for emitted light that still safely produces reliable results?
+
+
 
