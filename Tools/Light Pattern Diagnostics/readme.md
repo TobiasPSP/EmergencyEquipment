@@ -72,3 +72,7 @@ Connecting the CJMCU board with its OPT101 on it to Arduino Nano (or any other m
 ![plot](./simple_wiring_opt101_to_arduino_nano.png)
 
 You can connect the output (*OUT* and *1M*) to one of the analog input pins of your MC, or you can as well connect it to a multimeter (connect the other end of it to GND) to see how the OPT101 works.
+
+## Technical Implementation
+
+In our first technical part, we [dive into getting OPT101 to work with Arduino and conduct light detection tests](./1%20Using%20OPT101%20to%20Detect%20Light).
