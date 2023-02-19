@@ -70,9 +70,13 @@ void loop() {
 }
 ```
 
+Once you have uploaded the code, open the serial monitor to view the readings. Make sure your serial monitor is using the correct baud rate, or adjust the baud rate you prefer in the code.
+
 ## Interpreting Results
 
+The readings report **brightness percentage**, **raw reading** and **supplied voltage**. When you move a light source towards the OPT101, the readings should change.
 
+Here are typical readings in a daylight ambient environment (room with window) when I moved the beam of a torch towards the OPT101:
 
 ```
 11% (raw value 122, 0.60 mV)
@@ -121,3 +125,167 @@ void loop() {
 84% (raw value 862, 4.21 mV)
 
 ```
+
+## OPT101 Sensitivity
+
+By looking at the readings above, it becomes clear that OPT101 (at least in my scenario) does not return voltages in a range of 0-5V. Instead, long before I actually pointed the torch directly onto the OPT101, the reading maxed out at 4.22V.
+
+So apparently, the built-in sensitivity of OPT101 is adjusted to ambient light scenarios. Measuring ultra bright lights is beyond the scope of the default settings. 
+
+### Adjusting the Range
+There are options to change the OPT101 sensitivity (both increase and decrease its sensitivity through the use of external resistors and capacitors). Whether or not changing the default sensitivity is needed is yet to be determined.
+
+It has become evident already though that the maximum output is not 5V but rather 4.22V (in my case, there may be variations). So the maximum digital reading is not a value of 1023 but rather one of 863.
+
+So let's adjust the code accordingly.
+
+## Better Code for Testing
+
+By lowering the valid range from 0-1023 to 0-863, readings will be more suitable for testing. In addition, I am no longer outputting the raw readings and voltages, and decided to output light intensity in percent with a float instead of an integer:
+
+```c++
+// make sure you adjust the pin to the analog input pin you use
+// this pin reads the analog output signal from OPT101
+#define sensor A2
+
+void setup() {
+  // setting the baud rate for the serial monitor
+  // make sure you set this baud rate in your serial monitor as well
+  // or else output will be garbled
+  Serial.begin(115200);
+}
+
+void loop() {
+  // read sensor value which is a voltage between 0 and 5V
+  // voltage relates to light intensity exposed to the opt101 unit
+  int value = analogRead(sensor);
+  
+  // calculate measured voltage
+  float voltage= value * (5.0 / 1023.0);
+  
+  // map analog input value (range 0-1023) to a value between 0 and 100
+  // turns out the sensor maximum is 4.22V which represents a value of 863,
+  // so this is the real range we want to map to 1-100%:
+  float percentage = map(value, 0, 863, 0, 100);
+  
+  Serial.print(percentage);
+  Serial.println("%.");
+}
+```
+
+## Final Evaluation
+
+Since I am going to use this setup to evaluate the flash frequency of emergency lights (and not ambient light scenarios), it's now time to evaluate whether the default sensitivity works for this purpose.
+
+I uploaded the code above and turned on an emergency light close by. It turned out that OPT101 readings initially did not respond much so the default sensitivity is not too high for the purpose. It then turned out that OPT101 picks up light in a fairly focused manner: when I moved the OPT101 in such a way that the emergency light shined more or less horizontally onto OPT101, things started to work.
+
+### Differentiating Light and Dark Patterns (Ambient Scenario)
+
+Below is a sample reading while operating a *Hänsch Movia D* magnetic emergency light in an ambient light scenario: I worked at daylight in an average inside room while operating the emergency light.
+
+```
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+100.00%.
+100.00%.
+36.00%.
+27.00%.
+23.00%.
+21.00%.
+19.00%.
+18.00%.
+18.00%.
+17.00%.
+17.00%.
+16.00%.
+16.00%.
+16.00%.
+16.00%.
+16.00%.
+16.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+15.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+99.00%.
+61.00%.
+35.00%.
+27.00%.
+23.00%.
+20.00%.
+19.00%.
+18.00%.
+18.00%.
+17.00%.
+17.00%.
+16.00%.
+16.00%.
+```
+
+Keep in mind that the code is sampling light emission in extremely short time intervals (which is the whole point when trying to detect flash patterns). What becomes evident by looking at the readings is that there is a sufficient differentiation between dark and light periods, and that the ambient light is not interfering:
+
+When the emergency light emits a pulse, OPT101 records full brightness (99-100%). When there is no pulse, the reading is clearly distinguishable (typically 15%).
+
+### Differentiating Light and Dark Patterns (Night Scenario)
+
+To better understand the influence of ambient light, I repeated the test in a completely dark room, simulating a night scenario:
+
