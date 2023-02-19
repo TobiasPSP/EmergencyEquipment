@@ -45,3 +45,54 @@ void loop() {
 }
 ```
 
+## Interpreting Results
+
+
+
+```
+11% (raw value 122, 0.60 mV)
+11% (raw value 122, 0.60 mV)
+12% (raw value 131, 0.64 mV)
+12% (raw value 131, 0.64 mV)
+12% (raw value 131, 0.64 mV)
+13% (raw value 135, 0.66 mV)
+13% (raw value 135, 0.66 mV)
+13% (raw value 137, 0.67 mV)
+13% (raw value 137, 0.67 mV)
+13% (raw value 137, 0.67 mV)
+13% (raw value 139, 0.68 mV)
+13% (raw value 139, 0.68 mV)
+13% (raw value 140, 0.68 mV)
+13% (raw value 141, 0.69 mV)
+13% (raw value 141, 0.69 mV)
+13% (raw value 143, 0.70 mV)
+14% (raw value 144, 0.70 mV)
+14% (raw value 145, 0.71 mV)
+14% (raw value 146, 0.71 mV)
+14% (raw value 148, 0.72 mV)
+14% (raw value 153, 0.75 mV)
+15% (raw value 154, 0.75 mV)
+15% (raw value 155, 0.76 mV)
+16% (raw value 170, 0.83 mV)
+16% (raw value 171, 0.84 mV)
+16% (raw value 174, 0.85 mV)
+17% (raw value 178, 0.87 mV)
+17% (raw value 184, 0.90 mV)
+18% (raw value 191, 0.93 mV)
+19% (raw value 198, 0.97 mV)
+20% (raw value 205, 1.00 mV)
+20% (raw value 212, 1.04 mV)
+21% (raw value 221, 1.08 mV)
+22% (raw value 231, 1.13 mV)
+23% (raw value 241, 1.18 mV)
+24% (raw value 253, 1.24 mV)
+26% (raw value 269, 1.31 mV)
+28% (raw value 289, 1.41 mV)
+32% (raw value 330, 1.61 mV)
+39% (raw value 405, 1.98 mV)
+58% (raw value 601, 2.94 mV)
+84% (raw value 863, 4.22 mV)
+84% (raw value 863, 4.22 mV)
+84% (raw value 862, 4.21 mV)
+
+```
