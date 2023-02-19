@@ -21,6 +21,23 @@ Note the use of the function *map()*: Arduinos analog input pins convert any ana
 
 *map()* maps these values to a custom range. In our scenario, I would like to receive light intensity, so I am not interested in a value of 0 - 1023 but instead would prefer a percentage value between 0 (complete darkness) and 100 (full brightness).
 
+### Mapping Values to Voltage
+The actual voltage rerturned by OPT101 could as well be mapped via *map()* however I simply adjusted it via the formula *currentvoltage = currentreading * (maximumVoltage / maximumValue)*. 
+
+*Note: when you do these calculations, make sure you use the correct data types. Instead of 
+
+```c++
+voltage= value * (5 / 1023);
+```
+
+make sure you write:
+
+```c++
+voltage= value * (5.0 / 1023.0);
+```
+
+Here is the complete testing code:
+
 ```c++
 // make sure you adjust the pin to the analog input pin you use
 // this pin reads the analog output signal from OPT101
@@ -38,10 +55,18 @@ void loop() {
   // voltage relates to light intensity exposed to the opt101 unit
   int value = analogRead(sensor);
   
-  // map analog input value (range 0-1023) to a value between 0 and 100
-  value = map(value, 0, 1024, 0, 100);
+  // calculate measured voltage
+  float voltage= value * (5.0 / 1023.0);
   
-  Serial.println(value);
+  // map analog input value (range 0-1023) to a value between 0 and 100
+  int percentage = map(value, 0, 1024, 0, 100);
+  
+  Serial.print(percentage);
+  Serial.print("% (raw value ");
+  Serial.print(value);
+  Serial.print(", ");
+  Serial.print(voltage);
+  Serial.println(" mV)");
 }
 ```
 
