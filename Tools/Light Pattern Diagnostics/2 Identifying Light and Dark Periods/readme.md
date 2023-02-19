@@ -64,8 +64,6 @@ void loop() {
   // do we have a status change (dark to light or vice versa)?
   if (isBright != active)
   {
-
-
     // how many millisecs did the last period take?
     // we have a pattern change
     duration = millis() - currentClock;
