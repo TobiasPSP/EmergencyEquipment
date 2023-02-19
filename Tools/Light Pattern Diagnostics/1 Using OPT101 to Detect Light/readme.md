@@ -36,7 +36,7 @@ make sure you write:
 voltage= value * (5.0 / 1023.0);
 ```
 
-Here is the complete testing code:
+Here is the complete [testing code](./1_Basic/1_Basic.ino):
 
 ```c++
 // make sure you adjust the pin to the analog input pin you use
