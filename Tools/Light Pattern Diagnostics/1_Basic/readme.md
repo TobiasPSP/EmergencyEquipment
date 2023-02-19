@@ -2,13 +2,15 @@
 
 As a first step, let's get the OPT101 board working and read in some light measurements so we can better evaluate its sensitivity.
 
-For this, I connected the board to a *Arduino Nano*: pins **VCC** to +5V, pins **COM** and **-V** to GND. The pin **GND** remains unconnected.
+## Connecting Arduino and OPT101
+
+I connected the board to a *Arduino Nano*: pins **VCC** to +5V, pins **COM** and **-V** to GND. The pin **GND** remains unconnected.
 
 The board returns an analog output at its pins **OUT** and **1MB**. The analog output returns a voltage in the range of *0V* to *5V* and raises in a linear way with the light intensity.
 
-I connected both of the analog output pins to Arduino **pin 4**. Any analog input pin will do though (provided you adjust the pin setting in the code).
+So I connected both of the analog output pins to Arduino **pin 2**. Any analog input pin will do though (provided you adjust the pin setting in the code).
 
-Note: In this simple example, I am using the board *as-is*: I did not add soldering bridges underneath the OPT101 chip (which can be used to change its sensitivity). For this reason, the analog output is read from both the pins **OUT** and **1M**.
+*Note: In this simple example, I am using the board *as-is*: I did not add soldering bridges underneath the OPT101 chip (which can be used to change its sensitivity). For this reason, the analog output is read from both the pins **OUT** and **1M**.*
 
 ```c++
 // make sure you adjust the pin to the analog input pin you use
@@ -33,3 +35,4 @@ void loop() {
   Serial.println(value);
 }
 ```
+
