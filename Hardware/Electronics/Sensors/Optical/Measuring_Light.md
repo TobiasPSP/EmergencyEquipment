@@ -76,3 +76,20 @@ If however you want to measure light with high time resolution, i.e. to measure 
 This is why typically photoresistors are great to measure static light (i.e. brightness in a room) but are not suitable for high-frequency measurement series.
 
 ## Luminous Efficiency Function
+
+Electronic devices return an analog signal that corresponds with the received light energy (*W/m2*). To translate this energy to a human *brightness*, the light frequency must be taken into account. 
+
+### Monochromatic Light
+
+If you are measuring monochromatic light only, you can multiply your analog signal with a static numeric value that describes how sensitive the human eye is to the light frequency you measure. 
+
+Here is a simple example: the factor for green light is higher than the factor for red light because the human eye is more sensitive to the frequency spectrum of green light. A red and a green LED with the same *W/m2* energy emission appear differently bright to the human eye with the green LED *feeling* much brighter than the red. Thanks to the correction factor taking into account different frequencies, both LEDs with the same *W/m2* energy emission would have different *Lumen*.
+
+### Mixed Light
+
+In many circumstances, you want to measure a mixture of many different light frequencies. I.e. "white light" consists of all frequencies within the visible light.
+
+Since it is completely impractical to filter out different light frequencies and apply individual correction factors per frequencies, two formulas are in wide use that apply the human eye sensitivity to frequency. Since the human eye has different receptors for bright and for dim light, there are two formulars:
+
+* **Photopic Luminosity Function**: For *everyday light levels* that are picked up by the color-sensitive *Cones* in the human eye that require daylight levels of light to operate.
+* **Scotopic Curve**: For dim light levels that are picked up by the black-and-white *Rods* that are highly sensitive to light but cannot differentiate colors (wavelengths).
