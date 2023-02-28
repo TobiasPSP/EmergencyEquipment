@@ -204,7 +204,7 @@ Your electronic sensor measures light energy. We first need to convert this ener
 *  **Sensor Sensitivity**: you need to also know the sensitivity of your chip in *W/m2* (often other units are used such as *uW/cm2* which can be easily converted)
 
 
-- or -
+\- or -
 
 
 * **Voltage-to-W/m2**: the chip data sheet contains tables that let you correlate the sensor output to a measured energy in *W/m2*, already taking into account the sensor specifics such as the sensor size
