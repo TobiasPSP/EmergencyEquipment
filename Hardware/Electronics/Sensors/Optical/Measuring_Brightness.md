@@ -222,10 +222,10 @@ Xv = Xl * V(l) * Km
 ```
 
 * *X1* is the light energy measured by your device, normalized to the unit *W/m2* (during the normalization outlined above, you accounted for sensor size and its specific sensitivity to light wavelengths).
-* *V(l)* is the specific sensitivity of the human eye to the wavelength you are measuring (table 1)
+* *V(l)* is the specific sensitivity of the human eye to the wavelength you are measuring (**Table 1**)
 * *Km* is a fixed constant of 683lm/W (see above for details)
 
-Since you got Table 2 above with the ready-to-use correction factors for light wavelengths, the formula is even easier:
+Since you got [**Table 2**](./Measuring_Brightness.md#correction-factor-for-lumen-calculation) above with the ready-to-use correction factors for light wavelengths, the formula is even easier:
 
 ```
 Xv = Xl * correctionFactor
@@ -233,3 +233,12 @@ Xv = Xl * correctionFactor
 
 Simply take your normalized sensor reading and multiply it with the correction factor for the wavelength you measured.
 
+## Monochromatic vs. Natural Light
+
+Since the sensitivity of the human eye varies greatly between different light colors (wavelengths), measuring and calculating "brightness" for monochromatic light (as outlined above) is trivial whereas judging the brightess of natural light or mixed colors of different wavelengths is much harder.
+
+When you look at [**Table 2**](./Measuring_Brightness.md#correction-factor-for-lumen-calculation), you can easily see that even slight variations of wavelength make dramatic increases to brightness: red light of 670ns wavelength has just 1/5 (20%) of the brightness of red light at wavelength 640nm.
+
+Since it is impossible by all practical means to split up light into its wavelengths and calculate brightness individually, typically what is done instead is using a gaussian formula and approximate the correct value.
+
+Emergency lights typically use distinctly colored light, so for our purposes we will not dive deeper into the subject and stick with the formulas and conversion factors for monochromatic light as discussed above.
