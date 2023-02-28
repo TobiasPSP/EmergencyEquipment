@@ -203,7 +203,9 @@ Your electronic sensor measures light energy. We first need to convert this ener
 *  **Sensor Area**: since *W/m2* is energy per surface, you need the surface area of your sensor chip (the photoactive surface)
 *  **Sensor Sensitivity**: you need to also know the sensitivity of your chip in *W/m2* (often other units are used such as *uW/cm2* which can be easily converted)
 
+
 - or -
+
 
 * **Voltage-to-W/m2**: the chip data sheet contains tables that let you correlate the sensor output to a measured energy in *W/m2*, already taking into account the sensor specifics such as the sensor size
 
