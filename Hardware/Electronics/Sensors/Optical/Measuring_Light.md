@@ -23,6 +23,14 @@ You now know that *W/m2* ignores the specific sensitivity of the human eye and t
 
 However, what exactly *is* the difference between *Lux* and *Lumen* then?
 
-* **Lux** (receiving light): This unit looks at the receiver of the light so it measures how bright a given surface will be when the light is shed on it. Use it to calculate the requirements for lamps for a given lighting scenario, i.e. a stage or a room in your house.
-* **Lumen** (sending light): This unit looks at the sender of the light and measures the raw light output, independent of emitting angle, emitter surface, receiver surface, or distance to other objects. Use it to describe the raw *strength* of light sources.
+* **Lux** (*receiving* light): This unit looks at the receiver of the light so it measures how bright a given surface will be when the light is shed on it. Use it to calculate the requirements for lamps for a given lighting scenario, i.e. a stage or a room in your house.
+* **Lumen** (*sending* light): This unit looks at the sender of the light and measures the raw light output, independent of emitting angle, emitter surface, receiver surface, or distance to other objects. Use it to describe the raw *strength* of light sources.
+
+## Converting Lux to Lumen
+
+To better understand the relationship between *Lux* and *Lumen*, let's take a look at how to convert from *Lux* to *Lumen*:
+
+**1 Lux** (lx) represents the *luminous flux* of **1 Lumen** per square meter. So the same light source with the same lux will produce different lumens, depending on the distance to the illuminated object, its emitting angle and the presence of reflectors or other beam forming devices.
+
+Which makes total sense: a torch can be blazingly bright when tightly focused (on a small area) and shined directly into your eye, or it can be rather dim when shining on a wide angle from a great distance (on a much larger area).
 
