@@ -17,7 +17,7 @@ Let's take a closer look at what the different units really express:
 * **Photometric Radiation Equivalent**: this is the magic conversion factor that converts *W/m2* to *Lux*. Since it incorporates the specific sensitivity of the human eye to different wave lengths, this factor is not a constant but instead depends on the light wavelength. The *Photometric Radiation Equivalent* for light with a wavelength of *555nm* (roughly the midpoint of human eye sensitivity) for example is *683lm/W*.
 * **Lumen**: The unit "Lumen" measures the *luminous flux* emitted by a lamp in all directions. In older days, the "brightness* of conventional light bulbs was conveniently expressed as *Watt*. Since conventional light bulbs all work by heating a filament, they all shared the same efficiency (or lack thereof) so the brightness could roughly be guessed by looking at the energy intake. Today with many different light technologies (that all have different efficiencies), the energy intake no longer uniformly correlates to the light output. For example, a 5W light bulb produces considerably less light than a 5W LED. That's why *Lumen* today expresses the "*brightness*" of light emitting devices. 
 
-## Difference Between *Lux* and *Lumen*
+### Difference Between *Lux* and *Lumen*
 
 You now know that *W/m2* ignores the specific sensitivity of the human eye and thus is not suitable for measuring "brightness". Only *Lux* and *Lumen* take into account the light wavelength and the "feeling for brightness" for the human eye.
 
@@ -26,7 +26,7 @@ However, what exactly *is* the difference between *Lux* and *Lumen* then?
 * **Lux** (*receiving* light): This unit looks at the receiver of the light so it measures how bright a given surface will be when the light is shed on it. Use it to calculate the requirements for lamps for a given lighting scenario, i.e. a stage or a room in your house.
 * **Lumen** (*sending* light): This unit looks at the sender of the light and measures the raw light output, independent of emitting angle, emitter surface, receiver surface, or distance to other objects. Use it to describe the raw *strength* of light sources.
 
-## Converting Lux to Lumen
+### Converting Lux to Lumen
 
 To better understand the relationship between *Lux* and *Lumen*, let's take a look at how to convert from *Lux* to *Lumen*:
 
@@ -34,3 +34,45 @@ To better understand the relationship between *Lux* and *Lumen*, let's take a lo
 
 Which makes total sense: a torch can be blazingly bright when tightly focused (on a small area) and shined directly into your eye, or it can be rather dim when shining on a wide angle from a great distance (on a much larger area).
 
+## Measuring Light Intensity Electronically
+
+If you'd like to *measure* "brightness", you need a device that can translate light energy to a reading. As you have seen previously, there are a few technical challenges to make sure the device actually measures what you are interested in.
+
+### Photoelectric Component Types
+
+To measure light energy with an electronic device, you need a component that changes its characteristics in the presence of light, such as a *photodiode*, a *phptptransistor*, or a *photoresistor*. With each, the principle is the same: in the presence of light, more electric energy can pass, and this can be measured. 
+
+### Sensitivity to Wavelength
+
+The device needs to be sensitive to the light wavelength that matters to you. If you want to calculate *W/m2*, the sensitivity should include all light wavelengths that you expect to receive. If you want to calculate *Lumen*, the sensitivity should include visible light only. We'll elaborate on this more in a bit.
+
+### Sensitivity to Energy
+
+The device needs to be sensitive to light energy in the range that you want to measure. If you want to measure light outside in bright sunshine, the energy levels are grossly different from i.e. light measurements in a cave. If the device maxes out long before you actually go outside, or if the device does not differentiate dim light levels in the twilight, it may be of limited use to you.
+
+Most photoelectric components cannot measure the entire range from complete darkness to extreme sunshine. They can be embedded in simple electronic circuits, though, that shift their sensitivity into the range needed.
+
+### Wavelengths
+
+If you want to measure *W/m2* (Energy), the component needs to be sensitive to the complete light spectrum that includes all light that you expect to receive, i.e. include UV and Infrared.
+
+If you want to measure *Lumen*, the component needs to be sensitive to the light frequency that matters to you: if you just want to measure the *Lumen* of blue LED to compare different vendors or create a quality control station, all you need is a light component sensitive to around 450nm. If however you'd like to measure *Lumen* of white light, i.e. to examine torches or room lights, the device must be sensitive to the range of visible light.
+
+In addition, unwanted wavelengths must be isolated, either by excluding them (inside a room, there are hardly any UV or Infrared light emissions that would falsify your measurements) or by choosing a photoelectric device that is insensitive (blind) towards these frequencies.
+
+
+### Dealing with Different Wavelengths
+
+Unless you are measuring monochromatic light only (i.e. a LED emitting light with just one frequency), the photoelectric component must ideally be equally sensitive to all frequencies. This of course is impractical. In reality, photoelectric component sensitivity varies greatly with light frequency.
+
+That's why most reasonably-priced "lux meters" roughly estimate the brightness by averaging the readings around the center frequency of visible light. A more precise method would be to use light filters and measure smaller light frequency ranges (multiple measurements or multiple sensors).
+
+### Sensor Latency
+
+If you just want to measure *static* scenarios where the light isn't changing very much, any photoelectric component will do if it meets above criteria.
+
+If however you want to measure light with high time resolution, i.e. to measure the brightness of a thunderbolt or decode the light pattern of emergency lights, the photoelectric component must have a low *latency*: it must produce results fast (which typically exclude digital chips due to the required post-processing of analog readings), and it must be ready to take the next measurement fast (similar to the human eye, when you were blinded by a bright torch, your eye will require minutes to regain its ability to distinguish dim lights).
+
+This is why typically photoresistors are great to measure static light (i.e. brightness in a room) but are not suitable for high-frequency measurement series.
+
+## Luminous Efficiency Function
