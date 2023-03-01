@@ -2,6 +2,7 @@
 
 This is a [labeled light spectrum](https://en.wikipedia.org/wiki/Fluorescent_lamp#/media/File:Spectrum_of_halophosphate_type_fluorescent_bulb_(f30t12_ww_rs).png) from older-style halophosphate-phosphor fluorescent lamp using trivalent antimony- and divalent manganese-doped calcium halophosphate (Ca5(PO4)3(Cl, F):Sb3+, Mn2+). 
 
+![Image](./labeledSpectrum2.png)
 
 ## Labeled Peaks
 
