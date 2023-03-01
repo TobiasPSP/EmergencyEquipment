@@ -212,7 +212,7 @@ Both functions create the same RGB values:
 
 
 | Wavelength (nm) | R | G | B | Hex |
-|:---------:|:---:|:---:|:---:|:---:|
+|:---------:|:---:|:---:|:---:|---|
 |380|97|0|97|![#610061](https://via.placeholder.com/15/610061/610061.png) `#610061`|
 |381|100|0|102|![#640066](https://via.placeholder.com/15/640066/640066.png) `#640066`|
 |382|103|0|106|![#67006a](https://via.placeholder.com/15/67006a/67006a.png) `#67006a`|
