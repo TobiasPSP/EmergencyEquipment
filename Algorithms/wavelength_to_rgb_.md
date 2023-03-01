@@ -617,4 +617,4 @@ Both functions create the same RGB values:
 
 
 
-$${\color{red}Welcome \space \color{lightblue}To \space \color{lightgreen}Github}$$
+$${\color{#00FF00}Welcome \space \color{lightblue}To \space \color{lightgreen}Github}$$
