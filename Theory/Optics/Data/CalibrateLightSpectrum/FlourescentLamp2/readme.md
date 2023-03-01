@@ -4,6 +4,8 @@ This is a [labeled light spectrum](https://en.wikipedia.org/wiki/Fluorescent_lam
 
 ![Image](./labeledSpectrum2.png)
 
+ℹ️ ***Source:** [https://en.wikipedia.org/wiki/Fluorescent_lamp](https://en.wikipedia.org/wiki/Fluorescent_lamp)*
+
 ## Labeled Peaks
 
 In the picture, peaks are labeled
