@@ -2,7 +2,7 @@
 
 In this project, I want to create a device that automatically decodes the light pattern of emergency lights. These patterns consist of a series of high frequency LED flashes with different duration. 
 
-In a previous article I defined the hardware requirements and identified the [OPT101](../../../Optical/OPT101_Chip_and_CJMCU_breakout_board.md) as a suitable sensor for the task. 
+In a previous article I defined the hardware requirements and identified the [OPT101](../../../Hardware/Electronics/Sensors/Optical/OPT101_Chip_and_CJMCU_breakout_board.md) as a suitable sensor for the task. 
 
 To start off, let's get the OPT101 board working and read in some light measurements so we can better understand how the OPT101 and light detection actually works.
 
