@@ -1,5 +1,4 @@
-# see also https://donklipstein.com/photopic.html
-WaveLength,LuminousEfficiency
+WaveLength,PhotopicLuminousEfficiency
 380,0.0002000
 381,0.0002280
 382,0.0002610
