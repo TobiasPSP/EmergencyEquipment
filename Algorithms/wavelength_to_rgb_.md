@@ -616,5 +616,4 @@ Both functions create the same RGB values:
 |780|97|0|0|`#610000`|
 
 
-
-`#aa4400`
+![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `#f03c15`
