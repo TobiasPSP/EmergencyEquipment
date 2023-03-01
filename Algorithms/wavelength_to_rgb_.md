@@ -1,6 +1,6 @@
 # Wavelength to RGB
 
-Functions to convert a wavelength in nm (Nanometer) to R, G and B values.
+Functions to convert a wavelength in *nm* (Nanometer) to *R*, *G* and *B* values.
 
 ## C++/Arduino/ESP32
 
