@@ -5,63 +5,100 @@ Functions to convert a wavelength in nm (Nanometer) to R, G and B values.
 ## C++/Arduino/ESP32
 
 ```c++
-def wavelength_to_rgb(self,nm):
-		#from: https://www.codedrome.com/exploring-the-visible-spectrum-in-python/
-		#returns RGB vals for a given wavelength
-		gamma = 0.8
-		max_intensity = 255
-		factor = 0
+void setup() {
+  Serial.begin(115200);
+  
+  float gamma = 0.8;
+  float max_intensity = 255;
+  // put your main code here, to run repeatedly:
+  for (int nm = 380; nm <= 780; nm++) 
+  {
+    //  derived from http://www.physics.sfasu.edu/astro/color/spectra.html
+    
+    float factor = 0;
+    float R = 0;
+    float G = 0;
+    float B = 0;
 
-		rgb = {"R": 0, "G": 0, "B": 0}
+    if (nm>=380.0 && nm< 440.0)
+    {
+      R = ((nm - 440.0)*-1.0) / 60.0;
+      G = 0.0;
+      B = 1.0;
+    }
+    else if (nm < 490.0)
+    {
+      R = 0.0;
+      G = (nm - 440.0) / 50.0;
+      B = 1.0;
+    }
+    else if (nm < 510.0)
+    {
+      R = 0.0;
+      G = 1.0;
+      B = ((nm - 510)*-1.0) / 20.0;
+    }
+    else if (nm < 580.0)
+    {
+      R = (nm - 510.0) / 70.0;
+      G = 1.0;
+      B = 0.0;
+    }
+    else if (nm < 645.0)
+    {
+      R = 1.0;
+      G = ((nm - 645.0)*-1.0) / 65;
+      B = 0.0;
+    }
+    else if (nm <= 780.0)
+    {
+      R = 1.0;
+      G = 0.0;
+      B = 0.0;
+    }
 
-		if 380 <= nm <= 439:
-			rgb["R"] = -(nm - 440) / (440 - 380)
-			rgb["G"] = 0.0
-			rgb["B"] = 1.0
-		elif 440 <= nm <= 489:
-			rgb["R"] = 0.0
-			rgb["G"] = (nm - 440) / (490 - 440)
-			rgb["B"] = 1.0
-		elif 490 <= nm <= 509:
-			rgb["R"] = 0.0
-			rgb["G"] = 1.0
-			rgb["B"] = -(nm - 510) / (510 - 490)
-		elif 510 <= nm <= 579:
-			rgb["R"] = (nm - 510) / (580 - 510)
-			rgb["G"] = 1.0
-			rgb["B"] = 0.0
-		elif 580 <= nm <= 644:
-			rgb["R"] = 1.0
-			rgb["G"] = -(nm - 645) / (645 - 580)
-			rgb["B"] = 0.0
-		elif 645 <= nm <= 780:
-			rgb["R"] = 1.0
-			rgb["G"] = 0.0
-			rgb["B"] = 0.0
+    if (nm >= 380.0 && nm < 420.0)
+    {
+      factor = 0.3 + 0.7 * (nm - 380.0) / 40.0;
+    }
+    else if (nm <= 700.0)
+    {
+      factor = 1.0;
+    }
+    else if (nm <= 780.0)
+    {
+      factor = 0.3 + 0.7 * (780 - nm) / 80.0;
+    }
 
-		if 380 <= nm <= 419:
-			factor = 0.3 + 0.7 * (nm - 380) / (420 - 380)
-		elif 420 <= nm <= 700:
-			factor = 1.0
-		elif 701 <= nm <= 780:
-			factor = 0.3 + 0.7 * (780 - nm) / (780 - 700)
+    if (R > 0)
+    {
+      R = int(max_intensity * pow((R * factor),gamma));
+    }
+    
+    if (G > 0)
+    {
+      G = int(max_intensity * pow((G * factor),gamma));
+    }
 
-		if rgb["R"] > 0:
-			rgb["R"] = int(max_intensity * ((rgb["R"] * factor) ** gamma))
-		else:
-			rgb["R"] = 0
+    if (B > 0)
+    {
+      B = int(max_intensity * pow((B * factor),gamma));
+    }
 
-		if rgb["G"] > 0:
-			rgb["G"] = int(max_intensity * ((rgb["G"] * factor) ** gamma))
-		else:
-			rgb["G"] = 0
+    Serial.print(nm);
+    Serial.print(",");
+    Serial.print((int)R);
+    Serial.print(",");
+    Serial.print((int)G);
+    Serial.print(",");
+    Serial.println((int)B);    
+  }
+}
 
-		if rgb["B"] > 0:
-			rgb["B"] = int(max_intensity * ((rgb["B"] * factor) ** gamma))
-		else:
-			rgb["B"] = 0
-
-		return (rgb["R"], rgb["G"], rgb["B"])
+void loop() 
+{
+  
+}
 ```
 
 ## PowerShell
