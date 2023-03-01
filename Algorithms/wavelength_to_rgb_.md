@@ -616,10 +616,5 @@ Both functions create the same RGB values:
 |780|97|0|0|
 
 
-## Validation
 
-For rough data validation, the *PowerShell* code below takes the calculated RGB values and creates a HTML color table.
-
-```powershell
-
-```
+$${\color{red}Welcome \space \color{lightblue}To \space \color{lightgreen}Github}$$
