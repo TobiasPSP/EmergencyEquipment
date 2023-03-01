@@ -8,7 +8,7 @@ This is a [labeled light spectrum](https://commons.wikimedia.org/wiki/File:Fluor
 
 ## Labeled Peaks
 
-In the picture, peaks are labeled
+Labeled peaks and their source. Note that nominal wavelength and actual wavelength in this particular image differ slightly.
 
 | Number | Nominal Wavelength (*nm*) | Actual Wavelength in Image (*nm*) | Element |
 | :----: | :-----------------------: | :-------------------------------: | :-----: |
