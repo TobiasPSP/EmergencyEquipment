@@ -8,5 +8,5 @@ What you find here are my notes while working on different ideas. This includes 
 
 I'll keep an updated list of the things I do here:
 
-* **Emergency Light Auto Pattern Detector**: My [first project](../../tree/main/Tools/Light%20Pattern%20Diagnostics/1%20Using%20OPT101%20to%20Detect%20Light) deals with auto-decoding emergency light patterns. Results may be useful for fire fighter enthusiasts as well as model makers looking to create more realistic  emergency light timings.
+* **Emergency Light Auto Pattern Detector**: My [first project](../../tree/main/Projects/Light%20Pattern%20Diagnostics/1%20Using%20OPT101%20to%20Detect%20Light) deals with auto-decoding emergency light patterns. Results may be useful for fire fighter enthusiasts as well as model makers looking to create more realistic  emergency light timings.
 
