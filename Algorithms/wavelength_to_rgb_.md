@@ -4,6 +4,12 @@ Functions to convert a wavelength in nm (Nanometer) to R, G and B values.
 
 ## C++/Arduino/ESP32
 
+The code below outputs CSV data for wavelengths in the visible range from 380nm to 780nm and their approximate RGB values.
+
+The algorithm takes into account the special sensitivity of the human eye and corrects the value based on wavelength and subjective eye sensitivity.
+
+The method used is a rough approximation and does not take into account the specific correction factor per wavelength.
+
 ```c++
 void setup() {
   Serial.begin(115200);
