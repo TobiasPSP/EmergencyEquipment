@@ -1,6 +1,6 @@
 # Labeled Light Spectrum
 
-This is a labeled light spectrum from a flourescent lamp that can be used to calibrate spectrometers.
+This is a [labeled light spectrum](https://commons.wikimedia.org/wiki/File:Fluorescent_lighting_spectrum_peaks_labeled_with_colored_peaks_added.png) from a flourescent lamp that can be used to calibrate spectrometers.
 
 Flourescent lamps are ubiquously available. The light emitted will show distinct peaks from the elements used inside the lamp.
 
