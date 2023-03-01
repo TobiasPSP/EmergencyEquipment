@@ -1,6 +1,6 @@
 # Welcome
 
-Most of my repositories are about highly specific IT stuff. This one is not and deals with side projects derived from my job as trainer and project consultant, blending in personal hobbyist interests.
+Most of my repositories are about highly specific IT stuff, and quite a number aren't even public. This one is, and it deals with all kinds of side projects derived from my job as trainer and project consultant, blending in personal hobbyist interests.
 
 What you find here are my notes while working on different ideas. This includes theory, code, data and fixed solutions.
 
