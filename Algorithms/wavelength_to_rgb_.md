@@ -78,17 +78,17 @@ void setup() {
 
     if (R > 0)
     {
-      R = int(max_intensity * pow((R * factor),gamma));
+      R = round(max_intensity * pow((R * factor),gamma));
     }
     
     if (G > 0)
     {
-      G = int(max_intensity * pow((G * factor),gamma));
+      G = round(max_intensity * pow((G * factor),gamma));
     }
 
     if (B > 0)
     {
-      B = int(max_intensity * pow((B * factor),gamma));
+      B = round(max_intensity * pow((B * factor),gamma));
     }
 
     Serial.print(nm);
@@ -101,8 +101,7 @@ void setup() {
   }
 }
 
-void loop() 
-{
+void loop() {
   
 }
 ```
@@ -203,7 +202,6 @@ function Convert-WavelengthToRgb
         return $result
     }
 }
-
 
 380..780 | Convert-WavelengthToRgb | Out-GridView -Title 'Wavelength to RGB'
 ```
