@@ -2,6 +2,8 @@
 
 This is a [labeled light spectrum](https://commons.wikimedia.org/wiki/File:Fluorescent_lighting_spectrum_peaks_labeled_with_colored_peaks_added.png) from a newer typical "cool white" flourescent lamp with rare-earth phosphor utilizing two rare-earth-doped phosphors, Tb3+, Ce3+:LaPO4 for green and blue emission and Eu:Y2O3 for red. 
 
+![Image](./labeledSpectrum1.png)
+
 
 ## Labeled Peaks
 
