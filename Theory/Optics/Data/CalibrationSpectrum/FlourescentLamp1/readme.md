@@ -1,13 +1,9 @@
 # Labeled Light Spectrum
 
-This is a [labeled light spectrum](https://commons.wikimedia.org/wiki/File:Fluorescent_lighting_spectrum_peaks_labeled_with_colored_peaks_added.png) from a flourescent lamp that can be used to calibrate spectrometers.
+This is a [labeled light spectrum](https://commons.wikimedia.org/wiki/File:Fluorescent_lighting_spectrum_peaks_labeled_with_colored_peaks_added.png) from a newer typical "cool white" flourescent lamp with rare-earth phosphor utilizing two rare-earth-doped phosphors, Tb3+, Ce3+:LaPO4 for green and blue emission and Eu:Y2O3 for red. 
 
-Flourescent lamps are ubiquously available. The light emitted will show distinct peaks from the elements used inside the lamp.
 
-While the particular light spectrum of flourescent lamps may vary based on vendor and tolerances, the peaks will stay put as they resemble the resonance frequency of elements. Put differently, the intensity of peaks may vary but the wavelength of peaks will stay the same.
-
-Flourescent lamp spectrums are therefore ideal for calibration since they feature a number of distinct peaks across the entire spectrum that are easily distinguishable.
-## Peak Labeling
+## Labeled Peaks
 
 In the picture, peaks are labeled
 
