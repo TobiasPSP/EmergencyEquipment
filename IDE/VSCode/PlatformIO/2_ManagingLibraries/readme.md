@@ -62,6 +62,39 @@ The libraries you add are stored inside the selected project. They are really no
 
 <img src="media/managing_lib_5.PNG" width="70%" height="70%" />
 
-### Finding Example Code
+## Finding Example Code for New Libraries
+
+After successfully finding and installing libraries, the next step typically is to look at the example code shipped with a library to understand how it works.
+
+In the classic *Arduino IDE*, this is very simple via menu command. In *PlatformIO*, while it is still possible, it does not seem to be a very intuitive and straight-forward way. Since I installed libraries as specific dependencies for a specific project, they do not show up in the *PlatformIO Home Screen* list of locally available libraries.
+
+When I look up my project, on the other hand, while I can see the dependencies, there is no way to get to the library details.
+
+So I am currently resorting to either two approaches:
+
+### Library Manager
+
+Searching for a particular library again and then using the tab *Examples*. Here you can see the formatted examples. Copy and paste them to your code.
+
+<img src="media/managing_lib_6.PNG" width="70%" height="70%" />
+
+### Project Explorer
+
+In the *VSCode* folder explorer you can expand the folder structure of your project. When you add libraries to your project, they show beneath the folder *.pio\libdeps*. Navigate to the particular library. If it shipped with examples, you find the example files in the subfolder *examples*.
+
+Click the example file you are interested in to open it in *VSCode*, then copy and paste the code to your own source files.
+
+> **WARNING**: Libraries designed for *Arduino* typically ship with example files with extension *.INO* which is a proprietary extension for the classic *Arduino IDE*. They really are *c++* files with the extension *c*.
+> 
+> So when you open a *.ino* file, there will be a warning dialog explaining that *PlatformIO* IntelliSense won't work for *.ino* files and asking you to rename the file extension to *.c*.
+> 
+> Since you are most probably copying and pasting code from *.ino* files to your own files, you don't need to worry about it. *However*, what you should worry about is adding the following line to the top of any example code:
+> 
+> `#include <Arduino.h>`
+> 
+> The classic *Arduino IDE* adds this dependency automatically however *PlatformIO* expects clean code and needs this reference. Else, your build process will fail.
+
+<img src="media/managing_lib_7.PNG" width="70%" height="70%" />
+
 
 
