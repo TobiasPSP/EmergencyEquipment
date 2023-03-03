@@ -80,7 +80,9 @@ Each project folder contains these subfolders:
 <img src="media/platformio_setup_5.PNG" width="70%" height="70%" />
 
 > There is one important difference when comparing this code to the initialization code found in the classic *Arduino* IDE: the *#include Arduino.h* statement. *Arduino IDE* targets *only* Ardunio boards which is why it automates and abstracts a lot of things. 
+> 
 > One thing is silently including the standard library. When you build your code in a more generic development environment such as *PlatformIO*, no such *black magic* applies, and your code needs to be valid and clean. The benefit is that you now can target *many different* platforms. 
+> 
 > Should you forget to include the standard *Arduino.h* library, you will receive a lot of error messages once building your code because i.e. *Arduino* constant definitions such as *LED_BUILTIN*, *HIGH*, or *LOW* are undefined.
 
 * **include**: Here you can store header files your project depends on. Note that this is a place for *specific* header files that are part of your current project. *Generic* header files accessible to all of your projects should remain stored in the usual library folders outside your project. So typically, this folder will be emptry for simple code.
