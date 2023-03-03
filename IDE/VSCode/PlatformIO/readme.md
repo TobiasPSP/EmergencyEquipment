@@ -121,4 +121,6 @@ To start the build process, type `CTRL+SHIFT+P` to open the *VSCode Command Pale
 
 <img src="media/platformio_setup_7.PNG" width="70%" height="70%" />
 
+> The drop-down menu reveals that the command *PlatformIO: Build* has its own keyboard shortcut `CTRL+ALT+B`. So if you are willing to remember a few more keyboard shortcuts, then this one will enable to you to very quickly start the build process.
+
 
