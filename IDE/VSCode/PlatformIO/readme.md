@@ -83,5 +83,30 @@ Each project folder contains these subfolders:
 * **lib**: Similar to *include*, this is the place for *private* library files specific to your project. *Generic* library files accessible to all of your projects remain in their default library folders outside your project.
 * **.pio**: Contains configuration data for *PlatformIo*, i.e. the board type(s) you use for this project. Maintained automatically for simple projects.
 * **.vscode**: Local settings for *VSCode* that apply only to this particular project. 
+* **test**: optionally, you can add *unit tests* and other testing to this folder to automatically detect regression errors and make sure your code is ok. Adding automatic tests is very useful for more complex code but at first you can ignore this.
 
+## Compiling and Running Code
 
+After setting up the project, let's now write some code, send it to *Arduino* and watch it execute the code.
+
+I am using the basic *blink* example that blinks the built-in *Arduino* LED on the board so you don't have to set up any hardware:
+
+```c++
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+```
+
+Add this code to your *main.cpp* file in the project subfolder **src**.
+
+<img src="media/platformio_setup_6.PNG" width="70%" height="70%" />
