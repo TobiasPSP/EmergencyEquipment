@@ -17,5 +17,7 @@ In addition, these extensions often come with logic to actually run compilers, u
 
 One of the free extensions available for Arduino, ESP32 and a number of other embedded systems is **PlatformIO**. This article discusses the steps to set up this extension once you have installed it in *VSCode*.
 
-Once the extension is installed in *VSCode*, you see a new icon in the symbol bar to the left.
+Once the extension is installed in *VSCode*, you see a new icon in the symbol bar to the left. When you click on it, the main *PlatformIO Cockpit* page opens:
+
+![Icon](media\platformio_setup_1.png)
 
