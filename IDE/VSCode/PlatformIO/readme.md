@@ -61,3 +61,22 @@ The dialog can automatically uninstall conflicting extensions by clicking **Unin
 
 > If you don't want to get rid of other extensions, you can also manually disable them. However, even if other extensions are disabled, *VSCode* still emits the warning dialog.
 
+## Project Subfolder Structure
+
+Each *PlatformIo* project consists of a folder with a number of subfolders and the file *platformio.ini*.
+
+### platformio.ini
+
+The file *platformio.ini* describes the attributes of your project which is essentially what you submitted when you created the project: *platform*, *board*, and *framework*. 
+
+You do not need to touch this file unless you want to compile your code against a different board.
+
+### Subfolder Structure
+
+Each project folder contains these subfolders:
+
+* **src**: This is where your *source code* sits. By default, this folder contains just one file: *main.cpp*. When you click the file, it is prefilled with the typical *Arduino* code structure.
+
+<img src="media/platformio_setup_5.PNG" width="70%" height="70%" />
+
+* 
