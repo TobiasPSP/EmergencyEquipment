@@ -177,6 +177,16 @@ Or, press `CTRL+ALT+U` to directly execute the upload command.
 
 > A great thing about *PlatformIO* is that it automatically detects the COM port to use for uploading. 
 
+## Using UI for Building and Uploading
+
+If you're not a fan of keyboard shortcuts, now is the time to click the big *PlatformIO* icon on the left vertical icon panel in *VSCode*.
+
+This opens a tree view with project-related tasks. Simply click on *Build* or *Upload* to invoke the command.
+
+In this tree you also find commands such as *Upload and Monitor* (opens a serial monitor after uploading to receive and see data sent from Arduino to your PC via *Serial*) and *Monitor* (opens a serial monitor without first uploading, i.e. to pick up the data sent by an already running *Arduino*).
+
+<img src="media/platformio_setup_15.PNG" width="70%" height="70%" />
+
 ### COM Port Locked Errors
 
 > If you get errors trying to upload, one common cause can be that the COM port that you used to connect *Arduino* is *locked* by another program on your computer.
