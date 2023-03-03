@@ -190,4 +190,10 @@ To upload, either press `CTRL+SHIFT+P` to open the *Command Palette* again, and 
 
 Or, press `CTRL+ALT+U` to directly execute the upload command.
 
+The terminal window again shows the upload progress after which your *Arduino* should blink its built-in LED at *1Hz* (once per second).
+
+<img src="media/platformio_setup_9.PNG" width="70%" height="70%" />
+
+Go ahead and in *main.cpp* change `delay(1000);` to a different number, i.e. `delay(250);`, then press `CTRL+ALT+U`. Within just a few seconds, you adjusted the blink frequency.
+
 
