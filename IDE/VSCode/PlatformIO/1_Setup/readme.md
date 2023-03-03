@@ -187,7 +187,7 @@ In this tree you also find commands such as *Upload and Monitor* (opens a serial
 
 *Program Size* is also very convenient to check the memory consumption of your code, especially when targeting an *Arduino* version with limited resources such as *Arduino Nano*. The result of the check shows in the terminal window.
 
-<img src="media/platformio_setup_15.PNG" width="70%" height="70%" />
+<img src="media/platformio_setup_16.PNG" width="70%" height="70%" />
 
 ### COM Port Locked Errors
 
