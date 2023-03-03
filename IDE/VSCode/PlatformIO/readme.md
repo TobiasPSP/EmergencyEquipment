@@ -19,5 +19,5 @@ One of the free extensions available for Arduino, ESP32 and a number of other em
 
 Once the extension is installed in *VSCode*, you see a new icon in the symbol bar to the left. When you click on it, the main *PlatformIO Cockpit* page opens:
 
-![Icon](media\platformio_setup_1.png)
+![Icon](media/platformio_setup_1.png)
 
