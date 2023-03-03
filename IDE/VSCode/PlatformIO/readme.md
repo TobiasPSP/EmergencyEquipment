@@ -166,16 +166,28 @@ Add either code to your *main.cpp* file in the project subfolder **src**.
 
 The next step is to *build* the code: compile it and create a binary that can be uploaded to *Arduino*.
 
+### Using Command Palette
+
 To start the build process, type `CTRL+SHIFT+P` to open the *VSCode Command Palette* input at the top of the *VSCode* window, and enter "build". This shows all available *VSCode* commands containing *build*. Choose *PlatformIO: Build*.
 
 > If you are new to *VSCode*, you will quickly see that this editor is driven primarily through key strokes which makes it less inuitive at first. However, you do not need to remember many keyboard shortcuts. The *Command Palette* is your primary tool to discover and invoke hidden functionality. So do remember `CTRL+SHIFT+P`.
 
 <img src="media/platformio_setup_7.PNG" width="70%" height="70%" />
 
-> The drop-down menu reveals that the command *PlatformIO: Build* has its own keyboard shortcut `CTRL+ALT+B`. So if you are willing to remember a few more keyboard shortcuts, then this one will enable to you to very quickly start the build process.
+### Using Direct Keyboard Shortcut
+
+The drop-down menu reveals that the command *PlatformIO: Build* has its own keyboard shortcut `CTRL+ALT+B`. So if you are willing to remember a few more keyboard shortcuts, then this one will enable to you to very quickly start the build process.
 
 The build process results show in the *Terminal* window at the bottom. If you followed all steps, the code should compile without errors:
 
 <img src="media/platformio_setup_8.PNG" width="70%" height="70%" />
+
+## Uploading the Code
+
+Once the code compiled without errors, it needs to be uploaded to the *Arduino* board. So for the next step, make sure you connected your *Arduino* to the conmputer and see its power LED light up.
+
+To upload, either press `CTRL+SHIFT+P` to open the *Command Palette* again, and enter "upload", then choose *PlatformIO: Upload*.
+
+Or, press `CTRL+ALT+U` to directly execute the upload command.
 
 
