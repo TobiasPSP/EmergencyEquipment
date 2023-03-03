@@ -79,4 +79,9 @@ Each project folder contains these subfolders:
 
 <img src="media/platformio_setup_5.PNG" width="70%" height="70%" />
 
-* 
+* **include**: Here you can store header files your project depends on. Note that this is a place for *specific* header files that are part of your current project. *Generic* header files accessible to all of your projects should remain stored in the usual library folders outside your project. So typically, this folder will be emptry for simple code.
+* **lib**: Similar to *include*, this is the place for *private* library files specific to your project. *Generic* library files accessible to all of your projects remain in their default library folders outside your project.
+* **.pio**: Contains configuration data for *PlatformIo*, i.e. the board type(s) you use for this project. Maintained automatically for simple projects.
+* **.vscode**: Local settings for *VSCode* that apply only to this particular project. 
+
+
