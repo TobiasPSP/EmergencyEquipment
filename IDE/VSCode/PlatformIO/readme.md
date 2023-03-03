@@ -21,3 +21,9 @@ Once the extension is installed in *VSCode*, you see a new icon in the symbol ba
 
 ![Icon](media/platformio_setup_1.PNG)
 
+## Creating New Project
+
+To create a new *Project*, simply click on **New Project**. This opens up a new page. Here you can finally click on **New Project**:
+
+![Icon](media/platformio_setup_2.PNG)
+
