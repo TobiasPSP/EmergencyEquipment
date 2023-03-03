@@ -121,7 +121,37 @@ void loop() {
 }
 ```
 
-Add this code to your *main.cpp* file in the project subfolder **src**.
+This code really resembles the *Arduino* style of coding where a lot of abstraction takes place in `setup()` and `loop()`. 
+
+To move to a more robust generic code style that is closer to reality and uses less "background magic", consider writing the same thing like this:
+
+```c++
+// IMPORTANT: ADD THIS REFERENCE:
+#include <Arduino.h>
+
+// in any platform (including Arduino), initially the function main() is called:
+int main(int argc, char **argv) 
+{
+  // on Arduino, main() always calls init() first
+  // init() configures important parameters for the board you use
+  init();
+
+  // this is the location where the code is placed that 
+  // ArduinoIDE puts in setup():
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  // this is what Arduino calls loop()
+  // essentially it is an endless loop at the end of main():
+  for(;;) {
+    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(1000);                       // wait for a second
+    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+    delay(1000);                       // wait for a second
+  } 
+}
+```
+
+Add either code to your *main.cpp* file in the project subfolder **src**.
 
 <img src="media/platformio_setup_6.PNG" width="70%" height="70%" />
 
