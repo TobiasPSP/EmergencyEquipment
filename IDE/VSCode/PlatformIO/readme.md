@@ -110,3 +110,13 @@ void loop() {
 Add this code to your *main.cpp* file in the project subfolder **src**.
 
 <img src="media/platformio_setup_6.PNG" width="70%" height="70%" />
+
+## Building the Code
+
+The next step is to *build* the code: compile it and create a binary that can be uploaded to *Arduino*.
+
+To start the build process, type `CTRL+SHIFT+P` to open the *VSCode Command Palette* input at the top of the *VSCode* window, and enter "build". This shows all available *VSCode* commands containing *build*. Choose *PlatformIO: Build*.
+
+> If you are new to *VSCode*, you will quickly see that this editor is driven primarily through key strokes which makes it less inuitive at first. However, you do not need to remember many keyboard shortcuts. The *Command Palette* is your primary tool to discover and invoke hidden functionality. So do remember `CTRL+SHIFT+P`.
+
+
