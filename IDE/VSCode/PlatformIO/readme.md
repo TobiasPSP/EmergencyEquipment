@@ -75,9 +75,13 @@ You do not need to touch this file unless you want to compile your code against 
 
 Each project folder contains these subfolders:
 
-* **src**: This is where your *source code* sits. By default, this folder contains just one file: *main.cpp*. When you click the file, it is prefilled with the typical *Arduino* code structure.
+* **src**: This is where your *source code* sits. By default, this folder contains just one file: *main.cpp*. When you click the file, it is prefilled with the typical *Arduino* initialization code.
 
 <img src="media/platformio_setup_5.PNG" width="70%" height="70%" />
+
+> There is one important difference when comparing this code to the initialization code found in the classic *Arduino* IDE: the *#include Arduino.h* statement. *Arduino IDE* targets *only* Ardunio boards which is why it automates and abstracts a lot of things. 
+> One thing is silently including the standard library. When you build your code in a more generic development environment such as *PlatformIO*, no such *black magic* applies, and your code needs to be valid and clean. The benefit is that you now can target *many different* platforms. 
+> Should you forget to include the standard *Arduino.h* library, you will receive a lot of error messages once building your code because i.e. *Arduino* constant definitions such as *LED_BUILTIN*, *HIGH*, or *LOW* are undefined.
 
 * **include**: Here you can store header files your project depends on. Note that this is a place for *specific* header files that are part of your current project. *Generic* header files accessible to all of your projects should remain stored in the usual library folders outside your project. So typically, this folder will be emptry for simple code.
 * **lib**: Similar to *include*, this is the place for *private* library files specific to your project. *Generic* library files accessible to all of your projects remain in their default library folders outside your project.
@@ -92,6 +96,10 @@ After setting up the project, let's now write some code, send it to *Arduino* an
 I am using the basic *blink* example that blinks the built-in *Arduino* LED on the board so you don't have to set up any hardware:
 
 ```c++
+// Important: you MUST add this include for code taken from the classic Arduino IDE
+// The classic Arduino IDE silently adds this include statement which is why it is often missing in code.
+#include <Arduino.h>
+
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
