@@ -185,6 +185,8 @@ This opens a tree view with project-related tasks. Simply click on *Build* or *U
 
 In this tree you also find commands such as *Upload and Monitor* (opens a serial monitor after uploading to receive and see data sent from Arduino to your PC via *Serial*) and *Monitor* (opens a serial monitor without first uploading, i.e. to pick up the data sent by an already running *Arduino*).
 
+*Program Size* is also very convenient to check the memory consumption of your code, especially when targeting an *Arduino* version with limited resources such as *Arduino Nano*. The result of the check shows in the terminal window.
+
 <img src="media/platformio_setup_15.PNG" width="70%" height="70%" />
 
 ### COM Port Locked Errors
