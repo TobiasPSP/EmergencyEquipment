@@ -196,6 +196,25 @@ The terminal window again shows the upload progress after which your *Arduino* s
 
 Go ahead and in *main.cpp* change `delay(1000);` to a different number, i.e. `delay(250);`, then press `CTRL+ALT+B` (to re-build), then `CTRL+ALT+U` (to upload the new build). Within just a few seconds, you adjusted the blink frequency. Quickly it becomes obvious why using keyboard shortcuts in *VSCode* is such as popular thing despite it being unintuitive at first.
 
+## Testing IntelliSense
+
+One of the shortcomings of the classic *Arduino IDE* is its lack of good *IntelliSense* support. Let's check some of the *VSCode*/*PlatformIO* capabilities real quick.
+
+### Hover and Variable Content
+
+When you hover over a constant or variable, *VSCode* (or actually: the *PlatformIO* extension) provides rich content information.
+
+<img src="media/platformio_setup_10.PNG" width="70%" height="70%" />
+
+### Manually Invoking IntelliSense
+
+When you place the cursor into the arguments of a method and then manually invoke IntelliSense by pressing `CTRL+SPACE`, you get rich choice menus that show allowable values.
+
+<img src="media/platformio_setup_11.PNG" width="70%" height="70%" />
+
+> Whether or not the listed values are indeed *valid* depends on the way how the extension gathered the data. It can gather data *empirically* or by strictly walking the *dependency tree*. Obviously, an empiric list may still be handy but will contain valid *and* invalid entries.
+
+
 
 
 
