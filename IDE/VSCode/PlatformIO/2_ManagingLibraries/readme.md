@@ -51,6 +51,6 @@ To install a library, click *Add to Project*. This opens one more dialog where y
 
 The libraries you add are stored inside the selected project. They are really now *dependencies* of your project, so you can find them in the subfolder *.pio\libdeps\megaatmega2560* where *megaatmega2560* can be different, depending on the microcontroller you selected when you created the project.
 
-<img src="media/managing_lib_4.PNG" width="70%" height="70%" />
+<img src="media/managing_lib_5.PNG" width="70%" height="70%" />
 
 
