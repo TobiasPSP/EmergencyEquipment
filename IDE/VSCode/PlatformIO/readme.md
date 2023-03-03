@@ -132,7 +132,6 @@ Add this code to your *main.cpp* file in the project subfolder **src**.
 > Make sure you *always* add this line to code you copied from *Arduino IDE*. 
 
 
-
 ## Building the Code
 
 The next step is to *build* the code: compile it and create a binary that can be uploaded to *Arduino*.
@@ -144,5 +143,9 @@ To start the build process, type `CTRL+SHIFT+P` to open the *VSCode Command Pale
 <img src="media/platformio_setup_7.PNG" width="70%" height="70%" />
 
 > The drop-down menu reveals that the command *PlatformIO: Build* has its own keyboard shortcut `CTRL+ALT+B`. So if you are willing to remember a few more keyboard shortcuts, then this one will enable to you to very quickly start the build process.
+
+The build process results show in the *Terminal* window at the bottom. If you followed all steps, the code should compile without errors:
+
+<img src="media/platformio_setup_8.PNG" width="70%" height="70%" />
 
 
