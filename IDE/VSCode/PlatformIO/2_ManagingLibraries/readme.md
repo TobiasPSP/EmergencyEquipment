@@ -31,9 +31,13 @@ To do this in *PlatformIO*, in *VSCode* click the big *PlatformIO* icon in the v
 
 Now a search interface opens, much similar to the classic *Arduino Library Manager*. A search field lets you search for keywords. Let's put it to work.
 
-### Installing Support for TCS34725 Color Sensor
+## Installing Support for TCS34725 Color Sensor
 
-I'd like to use a color sensor with a *TCS34725* sensor on it, so I started by entering the keyword `TCS34725`, then clicked the icon with the magnifying glass.
+I'd like to use a color sensor with a *TCS34725* sensor on it. So I went ahead and created a project for it. With the project in place, I now need to find libraries that support this chip.
+
+### Searching for Libraries
+
+I started by entering the keyword `TCS34725`, then clicked the icon with the magnifying glass.
 
 Almost instantly, I got back a list of matching libraries, among them the two libraries I played with before in the classic *Arduino IDE*: *Adafruit TCS34725* by *Adafruit*, and *TCS34725* by *Hideaki Tai*.
 
@@ -41,9 +45,14 @@ Both show as "not installed" even though I installed them previously with the cl
 
 <img src="media/managing_lib_2.PNG" width="70%" height="70%" />
 
+### Examining Libraries
+
 When you click on a package, its details show. Details include version history but also its dependencies which is a nice thing: this way you know whether a library is stand-alone or requires a whole bunch of other libraries.
 
 <img src="media/managing_lib_3.PNG" width="70%" height="70%" />
+
+
+### Installing Libraries (aka: Adding Dependencies to a Project)
 
 To install a library, click *Add to Project*. This opens one more dialog where you specify the project you want to add the library to. When you are ready to download and install, click *Add*.
 
@@ -52,5 +61,7 @@ To install a library, click *Add to Project*. This opens one more dialog where y
 The libraries you add are stored inside the selected project. They are really now *dependencies* of your project, so you can find them in the subfolder *.pio\libdeps\megaatmega2560* where *megaatmega2560* can be different, depending on the microcontroller you selected when you created the project.
 
 <img src="media/managing_lib_5.PNG" width="70%" height="70%" />
+
+### Finding Example Code
 
 
