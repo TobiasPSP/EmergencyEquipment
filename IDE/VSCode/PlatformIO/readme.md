@@ -204,13 +204,13 @@ One of the shortcomings of the classic *Arduino IDE* is its lack of good *Intell
 
 When you hover over a constant or variable, *VSCode* (or actually: the *PlatformIO* extension) provides rich content information.
 
-<img src="media/platformio_setup_10.PNG" width="70%" height="70%" />
+<img src="media/platformio_setup_10.PNG" width="30%" height="30%" />
 
 ### Manually Invoking IntelliSense
 
 When you place the cursor into the arguments of a method and then manually invoke IntelliSense by pressing `CTRL+SPACE`, you get rich choice menus that show allowable values.
 
-<img src="media/platformio_setup_11.PNG" width="70%" height="70%" />
+<img src="media/platformio_setup_11.PNG" width="30%" height="30%" />
 
 > Whether or not the listed values are indeed *valid* depends on the way how the extension gathered the data. It can gather data *empirically* or by strictly walking the *dependency tree*. Obviously, an empiric list may still be handy but will contain valid *and* invalid entries.
 
