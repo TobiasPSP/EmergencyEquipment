@@ -214,6 +214,21 @@ When you place the cursor into the arguments of a method and then manually invok
 
 > Whether or not the listed values are indeed *valid* depends on the way how the extension gathered the data. It can gather data *empirically* or by strictly walking the *dependency tree*. Obviously, an empiric list may still be handy but will contain valid *and* invalid entries.
 
+### Automatically Invoking IntelliSense
+
+When you write new code, the extension opens up IntelliSense automatically on certain trigger keys. For example, when you type a method like `digitalWrite(`, once you entered `(`, IntelliSense opens and shows the *signature* of the method (the number of types of arguments the method expects from you).
+
+<img src="media/platformio_setup_12.PNG" width="30%" height="30%" />
+
+To get more information for a particular argument, press `CTRL+SPACE`. Now IntelliSense presents a list of predefined pin names (like `A1` for *Analog1*), along with many other keywords that wouldn't make sense at this point like `HIGH` and `LOW`.
+
+The reason why the IntelliSense list is rather unspecific lies in the method signature: the first argument for `digitalWrite()` is type `uint8_t` (unsigned 8-bit integer). This can essentially be any number, and *strict* IntelliSense would not be able to suggest *anything* short from a rather useless list of 256 numbers from 0 to 255.
+
+This is why it is an *excellent* thing that IntelliSense falls back to *empirical* data when needed: it examines all accessible libraries for any constant of the requested type and lists their names. Even though this list contains much noise, you will find valid entries and can shorten typing by autocompleting.
+
+<img src="media/platformio_setup_13.PNG" width="30%" height="30%" />
+
+
 
 
 
