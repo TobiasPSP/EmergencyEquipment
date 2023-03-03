@@ -11,4 +11,4 @@ explorer $env:userprofile\.platformio\packages
 ```
 
 <kbd><img src="media/managing_lib_1.PNG" width="70%" height="70%" /></kbd>
-<kbd>CTRL</kbd>
+
