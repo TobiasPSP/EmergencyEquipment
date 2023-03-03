@@ -19,11 +19,26 @@ One of the free extensions available for Arduino, ESP32 and a number of other em
 
 Once the extension is installed in *VSCode*, you see a new icon in the symbol bar to the left. When you click on it, the main *PlatformIO Cockpit* page opens:
 
-![Icon](media/platformio_setup_1.PNG)
+<img src="media/platformio_setup_1.PNG" width="70%" height="70%" />
 
 ## Creating New Project
 
 To create a new *Project*, simply click on **New Project**. This opens up a new page. Here you can finally click on **New Project**:
 
-![Icon](media/platformio_setup_2.PNG)
+<img src="media/platformio_setup_2.PNG" width="70%" height="70%" />
+
+This opens a dialog.
+
+### Choose Board Type
+
+Enter the details about your project:
+
+* **Name**: Any name for your project. This will name the folder your code is stored in.
+* **Model**: Specify the board you are using. I am using a *Arduino Mega 2560* in this example. 
+* **Framework**: The available frameworks depend on the software you have installed on your machine. If you have used *Arduino* before and downloaded the official *Arduino* Software, the list contains *Arduino Framework*. We'll later discuss how you can install and use other frameworks as well, for example if you want to program *ESP32* boards.
+* **Location**: By default, all projects are stored in a dedicated folder *PlatformIo\Projects* inside your *Documents* folder. You can choose a different location as well if you like.
+
+> Start choosing the correct *model* by clicking the drop-down icon at the right end of the *Model* text field. This lists all available models. By entering any text iinto the field, the list of models is automatically filtered for you. So by entering i.e. *2560* you immediately see the available models.
+
+<img src="media/platformio_setup_3.PNG" width="30%" height="30%" />
 
