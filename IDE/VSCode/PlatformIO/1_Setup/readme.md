@@ -153,7 +153,7 @@ The next step is to *build* the code: compile it and create a binary that can be
 
 ### Using Command Palette
 
-To start the build process, type <KBD>CTRL</KBD>+<KBD>SHIFT</KBD>+<KBD>P</KBD> to open the *VSCode Command Palette* input at the top of the *VSCode* window, and enter "build". This shows all available *VSCode* commands containing *build*. Choose *PlatformIO: Build*.
+To start the build process, type <KBD>CTRL+SHIFT+P</KBD> to open the *VSCode Command Palette* input at the top of the *VSCode* window, and enter "build". This shows all available *VSCode* commands containing *build*. Choose *PlatformIO: Build*.
 
 > If you are new to *VSCode*, you will quickly see that this editor is driven primarily through key strokes which makes it less inuitive at first. However, you do not need to remember many keyboard shortcuts. The *Command Palette* is your primary tool to discover and invoke hidden functionality. So do remember `CTRL+SHIFT+P`.
 
@@ -161,7 +161,7 @@ To start the build process, type <KBD>CTRL</KBD>+<KBD>SHIFT</KBD>+<KBD>P</KBD> t
 
 ### Using Direct Keyboard Shortcut
 
-The drop-down menu reveals that the command *PlatformIO: Build* has its own keyboard shortcut <KBD>CTRL</KBD>+<KBD>ALT</KBD>+<KBD>B</KBD>. So if you are willing to remember a few more keyboard shortcuts, then this one will enable to you to very quickly start the build process.
+The drop-down menu reveals that the command *PlatformIO: Build* has its own keyboard shortcut <KBD>CTRL+ALT+B</KBD>. So if you are willing to remember a few more keyboard shortcuts, then this one will enable to you to very quickly start the build process.
 
 The build process results show in the *Terminal* window at the bottom. If you followed all steps, the code should compile without errors:
 
@@ -171,9 +171,9 @@ The build process results show in the *Terminal* window at the bottom. If you fo
 
 Once the code compiled without errors, it needs to be uploaded to the *Arduino* board. So for the next step, make sure you connected your *Arduino* to the conmputer and see its power LED light up.
 
-To upload, either press `CTRL+SHIFT+P` to open the *Command Palette* again, and enter "upload", then choose *PlatformIO: Upload*.
+To upload, either press <KBD>CTRL+SHIFT+P</KBD> to open the *Command Palette* again, and enter "upload", then choose *PlatformIO: Upload*.
 
-Or, press <KBD>CTRL</KBD>+<KBD>ALT</KBD>+<KBD>U</KBD> to directly execute the upload command.
+Or, press <KBD>CTRL+ALT+U</KBD> to directly execute the upload command.
 
 > A great thing about *PlatformIO* is that it automatically detects the COM port to use for uploading. 
 
@@ -203,7 +203,7 @@ The terminal window again shows the upload progress after which your *Arduino* s
 
 <img src="media/platformio_setup_9.PNG" width="70%" height="70%" />
 
-Go ahead and in *main.cpp* change `delay(1000);` to a different number, i.e. `delay(250);`, then press <KBD>CTRL</KBD>+<KBD>ALT</KBD>+<KBD>B</KBD> (to re-build), then <KBD>CTRL</KBD>+<KBD>ALT</KBD>+<KBD>U</KBD> (to upload the new build). Within just a few seconds, you adjusted the blink frequency. Quickly it becomes obvious why using keyboard shortcuts in *VSCode* is such as popular thing despite it being unintuitive at first.
+Go ahead and in *main.cpp* change `delay(1000);` to a different number, i.e. `delay(250);`, then press <KBD>CTRL+ALT+B</KBD> (to re-build), then <KBD>CTRL+ALT+U</KBD> (to upload the new build). Within just a few seconds, you adjusted the blink frequency. Quickly it becomes obvious why using keyboard shortcuts in *VSCode* is such as popular thing despite it being unintuitive at first.
 
 ## Testing IntelliSense
 
@@ -217,7 +217,7 @@ When you hover over a constant or variable, *VSCode* (or actually: the *Platform
 
 ### Manually Invoking IntelliSense
 
-When you place the cursor into the arguments of a method and then manually invoke IntelliSense by pressing <KBD>CTRL</KBD>+<KBD>SPACE</KBD>, you get rich choice menus that show allowable values.
+When you place the cursor into the arguments of a method and then manually invoke IntelliSense by pressing <KBD>CTRL+SPACE</KBD>, you get rich choice menus that show allowable values.
 
 <img src="media/platformio_setup_11.PNG" width="30%" height="30%" />
 
@@ -229,7 +229,7 @@ When you write new code, the extension opens up IntelliSense automatically on ce
 
 <img src="media/platformio_setup_12.PNG" width="30%" height="30%" />
 
-To get more information for a particular argument, press <KBD>CTRL</KBD>+<KBD>SPACE</KBD>. Now IntelliSense presents a list of predefined pin names (like `A1` for *Analog1*), along with many other keywords that wouldn't make sense at this point like `HIGH` and `LOW`.
+To get more information for a particular argument, press <KBD>CTRL+SPACE</KBD>. Now IntelliSense presents a list of predefined pin names (like `A1` for *Analog1*), along with many other keywords that wouldn't make sense at this point like `HIGH` and `LOW`.
 
 #### Empiric IntelliSense vs. Strict IntelliSense
 
