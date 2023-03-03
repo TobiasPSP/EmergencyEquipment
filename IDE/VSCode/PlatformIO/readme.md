@@ -21,7 +21,9 @@ Once the extension is installed in *VSCode*, you see a new icon in the symbol ba
 
 <img src="media/platformio_setup_1.PNG" width="70%" height="70%" />
 
-## Creating New Project
+To set up the extension, simply create a first new project.
+
+## Creating First New Project
 
 To create a new *Project*, simply click on **New Project**. This opens up a new page. Here you can finally click on **New Project**:
 
@@ -42,3 +44,39 @@ Enter the details about your project:
 
 <img src="media/platformio_setup_3.PNG" width="30%" height="30%" />
 
+Click **Finish** to set up your project. When you do this for the first time, it may take a minute. 
+
+> Once the project folder is added to your hard drive, *VSCode* asks whether you trust this location. Click **Yes**.
+
+PlatformIo has created a rather complex subfolder structure for your project which we'll look at next.
+
+<img src="media/platformio_setup_4.PNG" width="70%" height="70%" />
+
+
+### Conflicting Extensions
+
+Once your first project has been set up, *VSCode* may show a warning dialog in its lower right corner complaining about *Conflicting IntelliSense Extensions*. This happens when you have installed other extensions for *Arduino* code files before, i.e. the *Arduino* Extension from Microsoft.
+
+The dialog can automatically uninstall conflicting extensions by clicking **Uninstall Conflicted**. 
+
+> If you don't want to get rid of other extensions, you can also manually disable them. However, even if other extensions are disabled, *VSCode* still emits the warning dialog.
+
+## Project Subfolder Structure
+
+Each *PlatformIo* project consists of a folder with a number of subfolders and the file *platformio.ini*.
+
+### platformio.ini
+
+The file *platformio.ini* describes the attributes of your project which is essentially what you submitted when you created the project: *platform*, *board*, and *framework*. 
+
+You do not need to touch this file unless you want to compile your code against a different board.
+
+### Subfolder Structure
+
+Each project folder contains these subfolders:
+
+* **src**: This is where your *source code* sits. By default, this folder contains just one file: *main.cpp*. When you click the file, it is prefilled with the typical *Arduino* code structure.
+
+<img src="media/platformio_setup_5.PNG" width="70%" height="70%" />
+
+* 
