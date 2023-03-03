@@ -9,3 +9,5 @@ On Windows, you can open this folder in *Windows Explorer* via this *PowerShell*
 ```powershell
 explorer $env:userprofile\.platformio\packages
 ```
+
+<img src="media/managing_lib_1.PNG" width="70%" height="70%" />
