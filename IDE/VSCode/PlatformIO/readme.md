@@ -194,6 +194,8 @@ The terminal window again shows the upload progress after which your *Arduino* s
 
 <img src="media/platformio_setup_9.PNG" width="70%" height="70%" />
 
-Go ahead and in *main.cpp* change `delay(1000);` to a different number, i.e. `delay(250);`, then press `CTRL+ALT+U`. Within just a few seconds, you adjusted the blink frequency.
+Go ahead and in *main.cpp* change `delay(1000);` to a different number, i.e. `delay(250);`, then press `CTRL+ALT+B` (to re-build), then `CTRL+ALT+U` (to upload the new build). Within just a few seconds, you adjusted the blink frequency. Quickly it becomes obvious why using keyboard shortcuts in *VSCode* is such as popular thing despite it being unintuitive at first.
+
+
 
 
