@@ -190,6 +190,18 @@ To upload, either press `CTRL+SHIFT+P` to open the *Command Palette* again, and 
 
 Or, press `CTRL+ALT+U` to directly execute the upload command.
 
+> A great thing about *PlatformIO* is that it automatically detects the COM port to use for uploading. 
+
+### COM Port Locked Errors
+
+> If you get errors trying to upload, one common cause can be that the COM port that you used to connect *Arduino* is *locked* by another program on your computer.
+> 
+> When this occurs, you should first close all other running programs. Programs do not need to be connected to programming and can still lock COM ports. I don't yet understand why, but on my machine I frequently have to close the design program *Fusion 360* when I run into COM port issues to resolve them.
+> 
+> If closing programs won't help, as a last resort reboot your machine. This typically solves all COM port issues for sure.
+
+
+
 The terminal window again shows the upload progress after which your *Arduino* should blink its built-in LED at *1Hz* (once per second).
 
 <img src="media/platformio_setup_9.PNG" width="70%" height="70%" />
@@ -222,14 +234,37 @@ When you write new code, the extension opens up IntelliSense automatically on ce
 
 To get more information for a particular argument, press `CTRL+SPACE`. Now IntelliSense presents a list of predefined pin names (like `A1` for *Analog1*), along with many other keywords that wouldn't make sense at this point like `HIGH` and `LOW`.
 
-The reason why the IntelliSense list is rather unspecific lies in the method signature: the first argument for `digitalWrite()` is type `uint8_t` (unsigned 8-bit integer). This can essentially be any number, and *strict* IntelliSense would not be able to suggest *anything* short from a rather useless list of 256 numbers from 0 to 255.
+#### Empiric IntelliSense vs. Strict IntelliSense
+
+The reason why the IntelliSense list is rather unspecific lies in the method signature: the first argument for `digitalWrite()` is requesting the rather unspecific type `uint8_t` (unsigned 8-bit integer, 0-255). *Strict* IntelliSense would not be able to suggest *anything* short from a rather useless list of all 256 numbers from 0 to 255.
 
 This is why it is an *excellent* thing that IntelliSense falls back to *empirical* data when needed: it examines all accessible libraries for any constant of the requested type and lists their names. Even though this list contains much noise, you will find valid entries and can shorten typing by autocompleting.
 
 <img src="media/platformio_setup_13.PNG" width="30%" height="30%" />
 
+*Strict* IntelliSense kicks in whenever there is a *specific* type like an enumeration or any other class that has distinct members.
 
+## Strict IntelliSense
 
+*PlatformIO* walks the dependencies of your code behind the scenes. This is why you can always *look up* code and peek into what really happens inside of methods.
+
+### Looking Up Code
+
+When you right-click a method such as `digitalWrite()` and choose *Go To Definition*, *VSCode* opens the underlying *library* file and shows the source code of the method. This way, you can debug code and better understand how it really works.
+
+When you hover over the file tab of the newly opened library file, a tooltip shows the file path so you can easily discover where the library is stored. The same information is visible in the breadcrump directly beneath the file tab on top of each code window.
+
+`digitalWrite()` is defined in *wiring_digital.c*, and this library is stored as a *package* in a hidden *PlatformIO* folder in my user profile.
+
+The fact that *PlatformIO* ships with many libraries and organizes them as *packages* explains why IntellSense works so well out of the box. In other developent environments, to make strict IntelliSense work, you need to configure a whole lot of locations because libraries typically lie scattered around in a multitude of different folder locations.
+
+<img src="media/platformio_setup_14.PNG" width="70%" height="70%" />
+
+*Go To Declaration* in contrast shows the *header* file of a method, not its internal source code. A header file just declares the method signatures. For `digitalWrite`, the header file is *Arduino.h* and again is a package shipped with *PlatformIO*.
+
+### Peeking Code
+
+Both the *definition* and the *declaration* of methods can also be blended into your own code window. For this, right-click a method and in the context menu choose *Peek*, then *Peek Definition* (for Source Code) or *Peek Declaration* (for Signature).
 
 
 
