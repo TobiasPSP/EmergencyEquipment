@@ -125,6 +125,14 @@ Add this code to your *main.cpp* file in the project subfolder **src**.
 
 <img src="media/platformio_setup_6.PNG" width="70%" height="70%" />
 
+> Note that the screenshot shows code that I copy&pasted directly from *Arduino IDE*. It is still missing the all-important first line:
+> 
+> `#include <Arduino.h>`
+> 
+> Make sure you *always* add this line to code you copied from *Arduino IDE*. 
+
+
+
 ## Building the Code
 
 The next step is to *build* the code: compile it and create a binary that can be uploaded to *Arduino*.
