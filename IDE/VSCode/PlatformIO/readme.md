@@ -19,13 +19,13 @@ One of the free extensions available for Arduino, ESP32 and a number of other em
 
 Once the extension is installed in *VSCode*, you see a new icon in the symbol bar to the left. When you click on it, the main *PlatformIO Cockpit* page opens:
 
-![Icon](media/platformio_setup_1.PNG)
+![Icon](media/platformio_setup_1.PNG | width=50%)
 
 ## Creating New Project
 
 To create a new *Project*, simply click on **New Project**. This opens up a new page. Here you can finally click on **New Project**:
 
-![Icon](media/platformio_setup_2.PNG)
+![Icon](media/platformio_setup_2.PNG | width=50%)
 
 This opens a dialog.
 
@@ -40,5 +40,5 @@ Enter the details about your project:
 
 > Start choosing the correct *model* by clicking the drop-down icon at the right end of the *Model* text field. This lists all available models. By entering any text iinto the field, the list of models is automatically filtered for you. So by entering i.e. *2560* you immediately see the available models.
 
-![Icon](media/platformio_setup_3.PNG)
+![Icon](media/platformio_setup_3.PNG | width=50%)
 
