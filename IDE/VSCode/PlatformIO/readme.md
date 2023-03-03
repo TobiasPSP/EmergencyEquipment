@@ -81,7 +81,9 @@ Each project folder contains these subfolders:
 
 > There is one important difference when comparing this code to the initialization code found in the classic *Arduino* IDE: 
 > 
-> the `#include Arduino.h` statement. *Arduino IDE* targets *only* Ardunio boards which is why it automates and abstracts a lot of things. 
+> `#include Arduino.h`
+> 
+> *Arduino IDE* targets *only* Ardunio boards which is why it automates and abstracts a lot of things. 
 > 
 > One thing is silently including the standard library. When you build your code in a more generic development environment such as *PlatformIO*, no such *black magic* applies, and your code needs to be valid and clean. The benefit is that you now can target *many different* platforms. 
 > 
